@@ -13,7 +13,7 @@ namespace PigDiceDemo.Models
         private int totalScore = 0;
         private int turnCounter = 0;
         private bool turnOver;
-        const int winningScore = 20;
+        const int winningScore = 20; //avoid magic number
         private Random random;
         private string user_input;
 
@@ -40,23 +40,23 @@ namespace PigDiceDemo.Models
                 while (!turnOver)
                 {
                     {
-                        Console.WriteLine("enter 'roll' to roll or 'hold' to hold.");
+                        Console.WriteLine("enter 'r' to roll or 'h' to hold.");
                         user_input = (Console.ReadLine());
 
-                        if (user_input == "roll")
+                        if (user_input == "r")
                         {
 
                             roll();
 
                         }
-                        else if (user_input == "hold")
+                        else if (user_input == "h")
                         {
                             Hold();
 
                         }
                         else
                         {
-                            Console.WriteLine("Invalid input. Please type 'roll' or 'hold'.");
+                            Console.WriteLine("Invalid input. Please type 'r' or 'h'.");
                         }
 
                     }
